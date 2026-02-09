@@ -288,3 +288,11 @@ body {
         padding: 40px 0;
     }
 }
+/* Prevent right-click and image dragging on Work and Club 55 pages */
+.work-item img,
+.club55-item img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
