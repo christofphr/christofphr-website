@@ -275,4 +275,12 @@ body {
     .bio-section p {
         font-size: 13px;
     }
+    
+    .work-page {
+        padding: 40px 0;
+    }
+    
+    .club55-page {
+        padding: 40px 0;
+    }
 }
