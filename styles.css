@@ -87,6 +87,10 @@ body {
 }
 
 /* Photo Section */
+.about-photo {
+    position: sticky;
+    top: 80px;
+}
 
 .about-photo img {
     width: 100%;
@@ -97,10 +101,6 @@ body {
 /* Bio Content */
 .about-content {
     padding-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: calc(100vh - 160px);
 }
 
 .bio-section {
@@ -231,13 +231,10 @@ body {
     }
     
     .about-container {
-        max-width: 1200px;
-        margin: 0 0 0 20px;
-        padding: 0 60px 100px 60px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 100px;
-        align-items: start;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 0 30px;
+        margin: 0;
     }
     
     .about-photo {
@@ -286,12 +283,4 @@ body {
     .club55-page {
         padding: 40px 0;
     }
-}
-/* Prevent right-click and image dragging on Work and Club 55 pages */
-.work-item img,
-.club55-item img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
 }
