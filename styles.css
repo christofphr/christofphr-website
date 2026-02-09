@@ -101,6 +101,8 @@ body {
 /* Bio Content */
 .about-content {
     padding-top: 0;
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
 
 .bio-section {
