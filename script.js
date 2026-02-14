@@ -16,3 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Disable right-click on print images
+document.addEventListener('DOMContentLoaded', function() {
+    const printImages = document.querySelectorAll('.print-image img');
+    
+    printImages.forEach(img => {
+        // Prevent right-click
+        img.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Prevent drag
+        img.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    });
+});
