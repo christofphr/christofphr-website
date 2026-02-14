@@ -284,6 +284,7 @@ body {
         padding: 40px 0;
     }
 }
+
 /* Prints Page */
 .prints-page {
     padding: 80px 0 80px 0;
@@ -309,9 +310,8 @@ body {
 
 .print-image {
     overflow: hidden;
-    aspect-ratio: 3/2;
     width: 100%;
-    max-height: 500px;
+    height: 400px;
 }
 
 .print-image img {
