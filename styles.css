@@ -320,6 +320,15 @@ body {
     object-fit: cover;
 }
 
+.print-title {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666666;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
 .prints-inquire {
     display: flex;
     justify-content: flex-start;
