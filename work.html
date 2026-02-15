@@ -6,6 +6,67 @@
     <title>christofphr - Work</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <style>
+        /* Horizontal Scroll Specific Styles */
+        .horizontal-scroll-page {
+            position: fixed;
+            top: 0;
+            left: 200px;
+            right: 0;
+            bottom: 0;
+            background: #ffffff;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        
+        .horizontal-container {
+            display: flex;
+            height: 100vh;
+            padding: 0 60px;
+            gap: 7px;
+            align-items: center;
+        }
+        
+        .horizontal-item {
+            flex-shrink: 0;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .horizontal-item img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        /* Hide scrollbar but keep functionality */
+        .horizontal-scroll-page::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .horizontal-scroll-page {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 968px) {
+            .horizontal-scroll-page {
+                left: 0;
+            }
+            
+            .horizontal-container {
+                padding: 0 20px;
+                gap: 5px;
+            }
+            
+            .horizontal-item {
+                height: 60vh;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Left Sidebar Navigation -->
@@ -18,66 +79,70 @@
                     <li><a href="index.html">PROFILE</a></li>
                     <li><a href="work.html" class="active">WORK</a></li>
                     <li><a href="club55.html">CLUB 55</a></li>
-                    <li><a href="prints.html">PRINTS</a></li>
                     <li><a href="nyfw26.html">NYFW '26</a></li>
+                    <li><a href="prints.html">PRINTS</a></li>
                 </ul>
             </nav>
         </div>
     </aside>
 
-    <!-- Main Content Area -->
-    <main class="main-content">
-        <section class="work-page">
-            <div class="work-container">
-                <!-- Image Grid -->
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="images/photo1.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo2.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo3.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo4.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo5.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo6.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo7.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo8.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo9.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo10.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo11.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo12.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo13.jpg" alt="Photography by christofphr">
-                    </div>
-                    <div class="work-item">
-                        <img src="images/photo14.jpg" alt="Photography by christofphr">
-                    </div>
-                </div>
+    <!-- Horizontal Scroll Page -->
+    <div class="horizontal-scroll-page">
+        <div class="horizontal-container">
+            <div class="horizontal-item">
+                <img src="images/photo1.jpg" alt="Photo 1 by christofphr">
             </div>
-        </section>
-    </main>
+            <div class="horizontal-item">
+                <img src="images/photo2.jpg" alt="Photo 2 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo3.jpg" alt="Photo 3 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo4.jpg" alt="Photo 4 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo5.jpg" alt="Photo 5 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo6.jpg" alt="Photo 6 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo7.jpg" alt="Photo 7 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo8.jpg" alt="Photo 8 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo9.jpg" alt="Photo 9 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo10.jpg" alt="Photo 10 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo11.jpg" alt="Photo 11 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo12.jpg" alt="Photo 12 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo13.jpg" alt="Photo 13 by christofphr">
+            </div>
+            <div class="horizontal-item">
+                <img src="images/photo14.jpg" alt="Photo 14 by christofphr">
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
+    <script>
+        // Enable horizontal scroll with mouse wheel
+        const scrollContainer = document.querySelector('.horizontal-scroll-page');
+        
+        scrollContainer.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+    </script>
 </body>
 </html>
