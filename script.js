@@ -1,6 +1,6 @@
 // Disable right-click and drag on images across all gallery pages
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.work-item img, .club55-item img, .nyfw-item img, .print-image img, .horizontal-item img');
+    const images = document.querySelectorAll('.work-item img, .club55-item img, .print-image img, .horizontal-item img');
     
     images.forEach(img => {
         // Prevent right-click
