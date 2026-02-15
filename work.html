@@ -39,6 +39,10 @@
             height: 100%;
             width: auto;
             object-fit: contain;
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-touch-callout: none;
         }
         
         /* Hide scrollbar but keep functionality */
@@ -131,6 +135,8 @@
             <div class="horizontal-item">
                 <img src="images/photo14.jpg" alt="Photo 14 by christofphr">
             </div>
+            <!-- Spacer at the end -->
+            <div style="width: 60px; flex-shrink: 0;"></div>
         </div>
     </div>
 
@@ -142,6 +148,23 @@
         scrollContainer.addEventListener('wheel', (evt) => {
             evt.preventDefault();
             scrollContainer.scrollLeft += evt.deltaY;
+        });
+        
+        // Disable right-click and drag on images
+        const workImages = document.querySelectorAll('.horizontal-item img');
+        
+        workImages.forEach(img => {
+            // Prevent right-click
+            img.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Prevent drag
+            img.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
         });
     </script>
 </body>
