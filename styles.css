@@ -378,3 +378,63 @@ body {
     -webkit-user-drag: none;
     -webkit-touch-callout: none;
 }
+
+/* Noah Rinker Page */
+.noah-page {
+    padding: 80px 0 80px 0;
+}
+
+.noah-container {
+    max-width: 1400px;
+    margin: 0 0 0 20px;
+    padding: 0 60px;
+}
+
+.noah-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.noah-item.landscape {
+    grid-column: span 2;
+}
+
+.noah-item.portrait {
+    grid-column: span 1;
+}
+
+.noah-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive for Noah Rinker Page */
+@media (max-width: 968px) {
+    .noah-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .noah-item.landscape,
+    .noah-item.portrait {
+        grid-column: span 1;
+    }
+    
+    .noah-container {
+        margin: 0;
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .noah-page {
+        padding: 40px 0;
+    }
+    
+    .noah-container {
+        padding: 0 20px;
+    }
+}
