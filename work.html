@@ -6,71 +6,77 @@
     <title>christofphr - Work</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="preload" as="image" href="images/photo1.jpg">
-    <link rel="preload" as="image" href="images/photo2.jpg">
-    <link rel="preload" as="image" href="images/photo3.jpg">
     
     <style>
-        /* Horizontal Scroll Specific Styles */
-        .horizontal-scroll-page {
-            position: fixed;
-            top: 0;
-            left: 200px;
-            right: 0;
-            bottom: 0;
-            background: #ffffff;
-            overflow-x: auto;
-            overflow-y: hidden;
+        /* Work Grid Styles */
+        .work-grid-page {
+            padding: 80px 0;
         }
         
-        .horizontal-container {
-            display: flex;
-            height: 100vh;
+        .work-grid-container {
+            max-width: 1600px;
+            margin: 0 auto;
             padding: 0 60px;
-            gap: 7px;
-            align-items: center;
         }
         
-        .horizontal-item {
-            flex-shrink: 0;
-            height: 70vh;
-            display: flex;
-            align-items: center;
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            grid-auto-flow: dense;
         }
         
-        .horizontal-item img {
+        .work-grid-item {
+            overflow: hidden;
+        }
+        
+        .work-grid-item.landscape {
+            grid-column: span 2;
+        }
+        
+        .work-grid-item img {
+            width: 100%;
             height: 100%;
-            width: auto;
-            object-fit: contain;
+            object-fit: cover;
+            display: block;
             pointer-events: none;
             user-select: none;
             -webkit-user-drag: none;
             -webkit-touch-callout: none;
         }
         
-        /* Hide scrollbar but keep functionality */
-        .horizontal-scroll-page::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .horizontal-scroll-page {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        
         /* Mobile adjustments */
         @media (max-width: 968px) {
-            .horizontal-scroll-page {
-                left: 0;
+            .work-grid-container {
+                padding: 0 30px;
             }
             
-            .horizontal-container {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+            }
+            
+            .work-grid-item.landscape {
+                grid-column: span 2;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .work-grid-page {
+                padding: 40px 0;
+            }
+            
+            .work-grid-container {
                 padding: 0 20px;
+            }
+            
+            .work-grid {
+                grid-template-columns: 1fr;
                 gap: 5px;
             }
             
-            .horizontal-item {
-                height: 60vh;
+            .work-grid-item.landscape {
+                grid-column: span 1;
             }
         }
     </style>
@@ -93,82 +99,145 @@
         </div>
     </aside>
 
-    <!-- Horizontal Scroll Page -->
-    <div class="horizontal-scroll-page">
-        <div class="horizontal-container">
-            <div class="horizontal-item">
-                <img src="images/photo1.jpg" loading="eager" alt="Photo 1 by christofphr">
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <section class="work-grid-page">
+            <div class="work-grid-container">
+                <div class="work-grid">
+                    <div class="work-grid-item">
+                        <img src="images/photo1.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo2.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo3.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo4.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item landscape">
+                        <img src="images/photo5.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo6.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo7.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo8.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo9.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo10.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item landscape">
+                        <img src="images/photo11.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo12.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo13.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo14.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo15.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item landscape">
+                        <img src="images/photo16.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo17.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo18.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo19.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo20.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo21.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo22.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo23.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item landscape">
+                        <img src="images/photo24.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo25.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo26.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo27.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo28.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo29.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo30.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo31.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo32.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo33.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo34.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo35.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo36.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item landscape">
+                        <img src="images/photo37.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo38.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo39.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo40.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo41.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo42.jpg" alt="Photography by christofphr">
+                    </div>
+                    <div class="work-grid-item">
+                        <img src="images/photo43.jpg" alt="Photography by christofphr">
+                    </div>
+                </div>
             </div>
-            <div class="horizontal-item">
-                <img src="images/photo2.jpg" loading="eager" alt="Photo 2 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo3.jpg" loading="eager" alt="Photo 3 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo4.jpg" loading="lazy" alt="Photo 4 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo5.jpg" alt="Photo 5 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo6.jpg" alt="Photo 6 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo7.jpg" alt="Photo 7 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo8.jpg" alt="Photo 8 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo9.jpg" alt="Photo 9 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo10.jpg" alt="Photo 10 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo11.jpg" alt="Photo 11 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo12.jpg" alt="Photo 12 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo13.jpg" alt="Photo 13 by christofphr">
-            </div>
-            <div class="horizontal-item">
-                <img src="images/photo14.jpg" alt="Photo 14 by christofphr">
-            </div>
-            <!-- Spacer at the end -->
-            <div style="width: 60px; flex-shrink: 0;"></div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-    <script>
-        // Enable horizontal scroll with mouse wheel
-        const scrollContainer = document.querySelector('.horizontal-scroll-page');
-        
-        scrollContainer.addEventListener('wheel', (evt) => {
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
-        });
-        
-        // Disable right-click and drag on images
-        const workImages = document.querySelectorAll('.horizontal-item img');
-        
-        workImages.forEach(img => {
-            // Prevent right-click
-            img.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                return false;
-            });
-            
-            // Prevent drag
-            img.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-                return false;
-            });
-        });
-    </script>
 </body>
 </html>
