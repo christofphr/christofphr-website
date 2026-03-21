@@ -170,19 +170,32 @@
         });
     });
     
-    // Auto-hide sidebar on scroll
+    // Auto-hide sidebar on scroll (DESKTOP ONLY)
     const sidebar = document.querySelector('.sidebar');
     
     // Add transition for smooth animation
     scrollContainer.style.transition = 'left 0.3s ease';
     
+    // Only enable auto-hide on desktop (screen width > 968px)
     scrollContainer.addEventListener('scroll', function() {
-        if (scrollContainer.scrollLeft > 50) {
-            sidebar.style.display = 'none';
-            scrollContainer.style.left = '0';
-        } else {
+        // Check if desktop
+        if (window.innerWidth > 968) {
+            if (scrollContainer.scrollLeft > 50) {
+                sidebar.style.display = 'none';
+                scrollContainer.style.left = '0';
+            } else {
+                sidebar.style.display = 'block';
+                scrollContainer.style.left = '200px';
+            }
+        }
+    });
+    
+    // Reset sidebar on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 968) {
+            // On mobile, always show sidebar and reset position
             sidebar.style.display = 'block';
-            scrollContainer.style.left = '200px';
+            scrollContainer.style.left = '0';
         }
     });
 </script>
