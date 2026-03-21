@@ -145,32 +145,46 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script>
-        // Enable horizontal scroll with mouse wheel
-        const scrollContainer = document.querySelector('.horizontal-scroll-page');
-        
-        scrollContainer.addEventListener('wheel', (evt) => {
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
+<script src="script.js"></script>
+<script>
+    // Enable horizontal scroll with mouse wheel
+    const scrollContainer = document.querySelector('.horizontal-scroll-page');
+    
+    scrollContainer.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+    });
+    
+    // Disable right-click and drag on images
+    const images = document.querySelectorAll('.horizontal-item img');
+    
+    images.forEach(img => {
+        img.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
         });
         
-        // Disable right-click and drag on images
-        const images = document.querySelectorAll('.horizontal-item img');
-        
-        images.forEach(img => {
-            // Prevent right-click
-            img.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-                return false;
-            });
-            
-            // Prevent drag
-            img.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-                return false;
-            });
+        img.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
         });
-    </script>
+    });
+    
+    // Auto-hide sidebar on scroll
+    const sidebar = document.querySelector('.sidebar');
+    
+    // Add transition for smooth animation
+    scrollContainer.style.transition = 'left 0.3s ease';
+    
+    scrollContainer.addEventListener('scroll', function() {
+        if (scrollContainer.scrollLeft > 50) {
+            sidebar.style.display = 'none';
+            scrollContainer.style.left = '0';
+        } else {
+            sidebar.style.display = 'block';
+            scrollContainer.style.left = '200px';
+        }
+    });
+</script>
 </body>
 </html>
