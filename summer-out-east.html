@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Summer Out East — Chris Lucas</title>
+<meta name="description" content="East Hampton, Amagansett, Montauk. Photographs by Chris Lucas.">
+<style>
+:root{
+  --bg:#0e0d0b;
+  --fg:#efe9dd;
+  --dim:#8b8377;
+  --gap:6px;
+  --col:230px;
+  --row:152px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img{ -webkit-user-drag:none; -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; }
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--fg);
+  font:400 13px/1.6 ui-sans-serif,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ---- masthead ---- */
+.mast{
+  padding:15vh 5vw 9vh;
+  max-width:1000px;
+}
+.mast h1{
+  font:400 clamp(38px,8.5vw,104px)/0.94 "Times New Roman",Times,serif;
+  letter-spacing:-0.025em;
+}
+.mast h1 em{ font-style:italic; }
+.mast .meta{
+  margin-top:26px; display:flex; gap:26px; flex-wrap:wrap;
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim);
+}
+.mast .meta span{ position:relative; }
+.mast .meta span+span::before{
+  content:""; position:absolute; left:-14px; top:50%;
+  width:4px; height:1px; background:var(--dim);
+}
+
+/* ---- grid ---- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:var(--row);
+  gap:var(--gap);
+  padding:0 var(--gap) 12vh;
+}
+.t{
+  position:relative; overflow:hidden; background:#1a1815;
+  grid-column:span var(--w,1);
+  grid-row:span 9;
+}
+.t.wide{ grid-row:span 8; }
+.t img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  filter:saturate(.94);
+}
+
+/* ---- foot ---- */
+footer{
+  padding:0 5vw 10vh; display:flex; gap:30px; flex-wrap:wrap;
+  font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--dim);
+}
+footer a{ color:var(--dim); text-decoration:none; border-bottom:1px solid #2c2823; padding-bottom:2px; }
+footer a:hover{ color:var(--fg); border-color:var(--fg); }
+
+@media (max-width:900px){
+  .grid{ grid-template-columns:repeat(2,1fr); }
+  .t{ grid-column:span 1; }
+  .t.wide{ grid-column:span 2; }
+}
+@media (max-width:640px){
+  :root{ --gap:4px; }
+  .mast{ padding:11vh 6vw 7vh; }
+}
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+}
+</style></head>
+<body>
+
+<header class="mast">
+  <h1>Summer<br><em>Out East</em></h1>
+  <div class="meta">
+    <span>East Hampton</span><span>Amagansett</span><span>Montauk</span><span>2026</span>
+  </div>
+</header>
+
+<div class="grid" id="g">
+<figure class="t wide" data-seq="1" style="--w:2"><img src="summer-out-east/001.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 1"></figure>
+<figure class="t" data-seq="2" style="--w:1"><img src="summer-out-east/002.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 2"></figure>
+<figure class="t" data-seq="3" style="--w:1"><img src="summer-out-east/003.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 3"></figure>
+<figure class="t" data-seq="4" style="--w:1"><img src="summer-out-east/004.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 4"></figure>
+<figure class="t" data-seq="5" style="--w:1"><img src="summer-out-east/005.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 5"></figure>
+<figure class="t" data-seq="6" style="--w:1"><img src="summer-out-east/006.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 6"></figure>
+<figure class="t" data-seq="7" style="--w:1"><img src="summer-out-east/007.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 7"></figure>
+<figure class="t" data-seq="8" style="--w:1"><img src="summer-out-east/008.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 8"></figure>
+<figure class="t" data-seq="9" style="--w:1"><img src="summer-out-east/009.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 9"></figure>
+<figure class="t" data-seq="10" style="--w:1"><img src="summer-out-east/010.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 10"></figure>
+<figure class="t" data-seq="11" style="--w:1"><img src="summer-out-east/011.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 11"></figure>
+<figure class="t wide" data-seq="12" style="--w:2"><img src="summer-out-east/012.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 12"></figure>
+<figure class="t" data-seq="13" style="--w:1"><img src="summer-out-east/013.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 13"></figure>
+<figure class="t" data-seq="14" style="--w:1"><img src="summer-out-east/014.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 14"></figure>
+<figure class="t wide" data-seq="15" style="--w:2"><img src="summer-out-east/015.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 15"></figure>
+<figure class="t" data-seq="16" style="--w:1"><img src="summer-out-east/016.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 16"></figure>
+<figure class="t" data-seq="17" style="--w:1"><img src="summer-out-east/017.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 17"></figure>
+<figure class="t wide" data-seq="18" style="--w:2"><img src="summer-out-east/018.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 18"></figure>
+<figure class="t" data-seq="19" style="--w:1"><img src="summer-out-east/019.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 19"></figure>
+<figure class="t" data-seq="20" style="--w:1"><img src="summer-out-east/020.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 20"></figure>
+<figure class="t wide" data-seq="21" style="--w:2"><img src="summer-out-east/021.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 21"></figure>
+<figure class="t" data-seq="22" style="--w:1"><img src="summer-out-east/022.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 22"></figure>
+<figure class="t" data-seq="23" style="--w:1"><img src="summer-out-east/023.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 23"></figure>
+<figure class="t" data-seq="24" style="--w:1"><img src="summer-out-east/024.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 24"></figure>
+<figure class="t" data-seq="25" style="--w:1"><img src="summer-out-east/025.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 25"></figure>
+<figure class="t" data-seq="26" style="--w:1"><img src="summer-out-east/026.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 26"></figure>
+<figure class="t" data-seq="27" style="--w:1"><img src="summer-out-east/027.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 27"></figure>
+<figure class="t" data-seq="28" style="--w:1"><img src="summer-out-east/028.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 28"></figure>
+<figure class="t" data-seq="29" style="--w:1"><img src="summer-out-east/029.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 29"></figure>
+<figure class="t" data-seq="30" style="--w:1"><img src="summer-out-east/030.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 30"></figure>
+<figure class="t" data-seq="31" style="--w:1"><img src="summer-out-east/031.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 31"></figure>
+<figure class="t wide" data-seq="32" style="--w:2"><img src="summer-out-east/032.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 32"></figure>
+<figure class="t wide" data-seq="33" style="--w:2"><img src="summer-out-east/033.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 33"></figure>
+<figure class="t" data-seq="34" style="--w:1"><img src="summer-out-east/034.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 34"></figure>
+<figure class="t" data-seq="35" style="--w:1"><img src="summer-out-east/035.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 35"></figure>
+<figure class="t" data-seq="36" style="--w:1"><img src="summer-out-east/036.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 36"></figure>
+<figure class="t" data-seq="37" style="--w:1"><img src="summer-out-east/037.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 37"></figure>
+<figure class="t" data-seq="38" style="--w:1"><img src="summer-out-east/038.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 38"></figure>
+<figure class="t" data-seq="39" style="--w:1"><img src="summer-out-east/039.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 39"></figure>
+<figure class="t" data-seq="40" style="--w:1"><img src="summer-out-east/040.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 40"></figure>
+<figure class="t" data-seq="41" style="--w:1"><img src="summer-out-east/041.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 41"></figure>
+<figure class="t wide" data-seq="42" style="--w:2"><img src="summer-out-east/042.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 42"></figure>
+<figure class="t wide" data-seq="43" style="--w:2"><img src="summer-out-east/043.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 43"></figure>
+<figure class="t" data-seq="44" style="--w:1"><img src="summer-out-east/044.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 44"></figure>
+<figure class="t" data-seq="45" style="--w:1"><img src="summer-out-east/045.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 45"></figure>
+<figure class="t" data-seq="46" style="--w:1"><img src="summer-out-east/046.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 46"></figure>
+<figure class="t" data-seq="47" style="--w:1"><img src="summer-out-east/047.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 47"></figure>
+<figure class="t" data-seq="48" style="--w:1"><img src="summer-out-east/048.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 48"></figure>
+<figure class="t" data-seq="49" style="--w:1"><img src="summer-out-east/049.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 49"></figure>
+<figure class="t wide" data-seq="50" style="--w:2"><img src="summer-out-east/050.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 50"></figure>
+<figure class="t" data-seq="51" style="--w:1"><img src="summer-out-east/051.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 51"></figure>
+<figure class="t" data-seq="52" style="--w:1"><img src="summer-out-east/052.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 52"></figure>
+<figure class="t wide" data-seq="53" style="--w:2"><img src="summer-out-east/053.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 53"></figure>
+<figure class="t" data-seq="54" style="--w:1"><img src="summer-out-east/054.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 54"></figure>
+<figure class="t" data-seq="55" style="--w:1"><img src="summer-out-east/055.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 55"></figure>
+<figure class="t" data-seq="56" style="--w:1"><img src="summer-out-east/056.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 56"></figure>
+<figure class="t" data-seq="57" style="--w:1"><img src="summer-out-east/057.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 57"></figure>
+<figure class="t wide" data-seq="58" style="--w:2"><img src="summer-out-east/058.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 58"></figure>
+<figure class="t wide" data-seq="59" style="--w:2"><img src="summer-out-east/059.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 59"></figure>
+<figure class="t" data-seq="60" style="--w:1"><img src="summer-out-east/060.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 60"></figure>
+<figure class="t" data-seq="61" style="--w:1"><img src="summer-out-east/061.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 61"></figure>
+<figure class="t" data-seq="62" style="--w:1"><img src="summer-out-east/062.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 62"></figure>
+<figure class="t" data-seq="63" style="--w:1"><img src="summer-out-east/063.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 63"></figure>
+<figure class="t" data-seq="64" style="--w:1"><img src="summer-out-east/064.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 64"></figure>
+<figure class="t" data-seq="65" style="--w:1"><img src="summer-out-east/065.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 65"></figure>
+<figure class="t wide" data-seq="66" style="--w:2"><img src="summer-out-east/066.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 66"></figure>
+<figure class="t" data-seq="67" style="--w:1"><img src="summer-out-east/067.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 67"></figure>
+<figure class="t" data-seq="68" style="--w:1"><img src="summer-out-east/068.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 68"></figure>
+<figure class="t" data-seq="69" style="--w:1"><img src="summer-out-east/069.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 69"></figure>
+<figure class="t" data-seq="70" style="--w:1"><img src="summer-out-east/070.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 70"></figure>
+<figure class="t wide" data-seq="71" style="--w:2"><img src="summer-out-east/071.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 71"></figure>
+<figure class="t" data-seq="72" style="--w:1"><img src="summer-out-east/072.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 72"></figure>
+<figure class="t" data-seq="73" style="--w:1"><img src="summer-out-east/073.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 73"></figure>
+<figure class="t" data-seq="74" style="--w:1"><img src="summer-out-east/074.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 74"></figure>
+<figure class="t" data-seq="75" style="--w:1"><img src="summer-out-east/075.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 75"></figure>
+<figure class="t" data-seq="76" style="--w:1"><img src="summer-out-east/076.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 76"></figure>
+<figure class="t" data-seq="77" style="--w:1"><img src="summer-out-east/077.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 77"></figure>
+<figure class="t" data-seq="78" style="--w:1"><img src="summer-out-east/078.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 78"></figure>
+<figure class="t" data-seq="79" style="--w:1"><img src="summer-out-east/079.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 79"></figure>
+<figure class="t" data-seq="80" style="--w:1"><img src="summer-out-east/080.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 80"></figure>
+<figure class="t" data-seq="81" style="--w:1"><img src="summer-out-east/081.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 81"></figure>
+<figure class="t wide" data-seq="82" style="--w:2"><img src="summer-out-east/082.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 82"></figure>
+<figure class="t" data-seq="83" style="--w:1"><img src="summer-out-east/083.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 83"></figure>
+<figure class="t" data-seq="84" style="--w:1"><img src="summer-out-east/084.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 84"></figure>
+<figure class="t wide" data-seq="85" style="--w:2"><img src="summer-out-east/085.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 85"></figure>
+<figure class="t" data-seq="86" style="--w:1"><img src="summer-out-east/086.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 86"></figure>
+<figure class="t" data-seq="87" style="--w:1"><img src="summer-out-east/087.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 87"></figure>
+<figure class="t" data-seq="88" style="--w:1"><img src="summer-out-east/088.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 88"></figure>
+<figure class="t" data-seq="89" style="--w:1"><img src="summer-out-east/089.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 89"></figure>
+<figure class="t" data-seq="90" style="--w:1"><img src="summer-out-east/090.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 90"></figure>
+<figure class="t" data-seq="91" style="--w:1"><img src="summer-out-east/091.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 91"></figure>
+<figure class="t wide" data-seq="92" style="--w:2"><img src="summer-out-east/092.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 92"></figure>
+<figure class="t wide" data-seq="93" style="--w:2"><img src="summer-out-east/093.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 93"></figure>
+<figure class="t" data-seq="94" style="--w:1"><img src="summer-out-east/094.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 94"></figure>
+<figure class="t" data-seq="95" style="--w:1"><img src="summer-out-east/095.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 95"></figure>
+<figure class="t wide" data-seq="96" style="--w:2"><img src="summer-out-east/096.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 96"></figure>
+<figure class="t wide" data-seq="97" style="--w:2"><img src="summer-out-east/097.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 97"></figure>
+<figure class="t" data-seq="98" style="--w:1"><img src="summer-out-east/098.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 98"></figure>
+<figure class="t" data-seq="99" style="--w:1"><img src="summer-out-east/099.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 99"></figure>
+<figure class="t" data-seq="100" style="--w:1"><img src="summer-out-east/100.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 100"></figure>
+<figure class="t" data-seq="101" style="--w:1"><img src="summer-out-east/101.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 101"></figure>
+<figure class="t" data-seq="102" style="--w:1"><img src="summer-out-east/102.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 102"></figure>
+<figure class="t" data-seq="103" style="--w:1"><img src="summer-out-east/103.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 103"></figure>
+<figure class="t" data-seq="104" style="--w:1"><img src="summer-out-east/104.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 104"></figure>
+<figure class="t" data-seq="105" style="--w:1"><img src="summer-out-east/105.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 105"></figure>
+<figure class="t" data-seq="106" style="--w:1"><img src="summer-out-east/106.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 106"></figure>
+<figure class="t" data-seq="107" style="--w:1"><img src="summer-out-east/107.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 107"></figure>
+<figure class="t wide" data-seq="108" style="--w:2"><img src="summer-out-east/108.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 108"></figure>
+<figure class="t" data-seq="109" style="--w:1"><img src="summer-out-east/109.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 109"></figure>
+<figure class="t" data-seq="110" style="--w:1"><img src="summer-out-east/110.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 110"></figure>
+<figure class="t" data-seq="111" style="--w:1"><img src="summer-out-east/111.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 111"></figure>
+<figure class="t" data-seq="112" style="--w:1"><img src="summer-out-east/112.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 112"></figure>
+<figure class="t wide" data-seq="113" style="--w:2"><img src="summer-out-east/extra1.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 113"></figure>
+<figure class="t wide" data-seq="114" style="--w:2"><img src="summer-out-east/extra2.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 114"></figure>
+<figure class="t wide" data-seq="115" style="--w:2"><img src="summer-out-east/extra3.jpg" loading="lazy" decoding="async" alt="Summer Out East, plate 115"></figure>
+</div>
+
+<footer>
+  <a href="index.html">&larr; christofphr.com</a>
+  <span>Chris Lucas</span>
+</footer>
+
+<script>
+const grid=document.getElementById('g');
+
+/* block right-click save and drag-out on every image */
+document.querySelectorAll('img').forEach(img=>{
+  img.addEventListener('contextmenu', e=>e.preventDefault());
+  img.addEventListener('dragstart', e=>e.preventDefault());
+});
+
+/* Plates are 2:3 portrait or 3:2 landscape. A portrait spans 9 rows,
+   a landscape spans 2 columns and 8 rows -- at those ratios (9:8) the
+   two shapes land on the same grid lines within a fraction of a pixel,
+   so the row height only needs to be derived once from the column
+   width actually rendered. */
+function sizeRows(){
+  const cs=getComputedStyle(grid);
+  const cols=cs.gridTemplateColumns.split(' ').filter(Boolean);
+  if(!cols.length) return;
+  const colW=parseFloat(cols[0]);
+  const gap=parseFloat(cs.gap)||6;
+  const row=(1.5*colW - 8*gap)/9;
+  grid.style.setProperty('--row', row.toFixed(3)+'px');
+}
+sizeRows();
+addEventListener('resize', sizeRows);
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(sizeRows);
+</script>
+</body></html>
