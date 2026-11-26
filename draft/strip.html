@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>christofphr - Strip</title>
+    <meta name="description" content="Photography by christofphr">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="draft.css">
+    <style>
+        /* Austin John-style strip: the page scrolls sideways */
+        html, body { height: 100%; overflow: hidden; }
+        .strip {
+            position: fixed; top: 0; bottom: 0; left: var(--sidebar); right: 0;
+            overflow-x: auto; overflow-y: hidden;
+            scrollbar-width: none;
+            overscroll-behavior-x: contain;
+        }
+        .strip::-webkit-scrollbar { display: none; }
+        .track {
+            display: flex; align-items: center; gap: 14px;
+            height: 100%; padding: 0 40px 0 40px;
+            width: max-content;
+        }
+        .frame { height: calc(100vh - 140px); flex: none; background: var(--tile); }
+        .frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+        .end { flex: none; width: 1px; }
+        .draft-flag { top: 14px; bottom: auto; }
+
+        .strip-ui {
+            position: fixed; left: calc(var(--sidebar) + 40px); right: 40px; bottom: 26px;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 10px; letter-spacing: 1.8px; color: var(--muted);
+            pointer-events: none;
+        }
+        .strip-ui .bar { flex: 1; height: 1px; background: var(--rule); margin: 0 24px; position: relative; }
+        .strip-ui .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); width: 0; }
+        .strip-ui button { pointer-events: auto; background: none; border: 0; font: inherit; letter-spacing: inherit; color: inherit; cursor: pointer; padding: 6px 0; }
+        .strip-ui button:hover { color: var(--ink); }
+
+        @media (max-width: 968px) {
+            html, body { height: auto; overflow: auto; }
+            .strip { position: static; height: 72vh; }
+            .track { padding: 0 20px; gap: 8px; }
+            .frame { height: calc(72vh - 40px); }
+            .strip-ui { position: static; padding: 6px 20px 30px; }
+            .strip-ui .bar { margin: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <a href="index.html" class="logo">christofphr</a>
+        <nav class="sidebar-nav">
+            <div class="nav-group">
+                <ul>
+                    <li><a href="index.html" class="active">INDEX</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="nav-group">
+                <div class="nav-label">SERIES</div>
+                <ul>
+                    <li><a href="summer-out-east.html">SUMMER OUT EAST</a></li>
+                    <li><a href="club-55.html">CLUB 55</a></li>
+                    <li><a href="winter.html">WINTER</a></li>
+                    <li><a href="out-east.html">OUT EAST</a></li>
+                    <li><a href="studio-54.html">STUDIO 54</a></li>
+                    <li><a href="noah-rinker.html">NOAH RINKER</a></li>
+                    <li><a href="hudson-ingram.html">HUDSON INGRAM</a></li>
+                    <li><a href="selected.html">SELECTED WORK</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="sidebar-foot">New York City</div>
+    </aside>
+
+    <div class="strip" id="strip">
+        <div class="track">
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-15_080412.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-03-01_140636.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-02-07_224247.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:4980/7470"><img src="../images/2026-07-20_194355.jpg" width="4980" height="7470" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:2048/1365"><img src="../images/2025-08-12_092533.jpg" width="2048" height="1365" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-10_133858.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-11_131955.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-09-13_115641.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-11_133426.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-04-04_230029.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:4593/3062"><img src="../images/2026-07-20_183539.jpg" width="4593" height="3062" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2024-09-21_072647.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-05-16_164458.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-15_075424.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-11_132624.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:2048/1365"><img src="../images/2026-03-07_090824.jpg" width="2048" height="1365" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2024-09-21_070836.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2024-05-11_213548.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-12_093928.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-05-03_141808.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:5095/7642"><img src="../images/2026-07-20_094436.jpg" width="5095" height="7642" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-01-24_210533.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-10-05_190702.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:6000/4000"><img src="../images/2026-07-23_130316.jpg" width="6000" height="4000" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-03-07_092330.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-09_122130.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-14_041739.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-12_095626.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2024-03-24_104114.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-11_153331.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-03-07_092730.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-09-20_174940.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-09_134032.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2024-09-21_073624.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-05-02_183017.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-11-29_163833.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:2048/1365"><img src="../images/2026-04-15_200530.jpg" width="2048" height="1365" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-17_140650.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-20_200055.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-09_135020.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-16_130604.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-12-21_152139.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-03-06_131902.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-01-11_150619.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:2048/1365"><img src="../images/2024-03-26_195324.jpg" width="2048" height="1365" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-05-02_145906.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2025-08-31_161119.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:2048/1365"><img src="../images/2026-05-17_124640.jpg" width="2048" height="1365" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:1365/2048"><img src="../images/2026-05-16_180659.jpg" width="1365" height="2048" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <figure class="frame" style="aspect-ratio:2048/1369"><img src="../images/2025-07-22_171321.jpg" width="2048" height="1369" loading="eager" decoding="async" alt="Photography by christofphr"></figure>
+            <div class="end"></div>
+        </div>
+    </div>
+
+    <div class="strip-ui">
+        <button id="prev" aria-label="Previous">PREV</button>
+        <span class="bar"><i id="progress"></i></span>
+        <span id="count">01 / 50</span>
+        <span class="bar" style="flex:0;margin:0 12px"></span>
+        <button id="next" aria-label="Next">NEXT</button>
+    </div>
+
+    <div class="draft-flag">DRAFT</div>
+    <script src="gallery.js"></script>
+    <script>
+    (function () {
+        const strip = document.getElementById('strip');
+        const frames = Array.from(strip.querySelectorAll('.frame'));
+        const count = document.getElementById('count');
+        const progress = document.getElementById('progress');
+        const pad = n => String(n).padStart(2, '0');
+
+        // Mouse wheel scrolls sideways (desktop)
+        strip.addEventListener('wheel', e => {
+            if (window.innerWidth <= 968) return;
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                e.preventDefault();
+                strip.scrollLeft += e.deltaY;
+            }
+        }, { passive: false });
+
+        function current() {
+            const mid = strip.scrollLeft + 60;
+            let i = 0;
+            frames.forEach((f, n) => { if (f.offsetLeft <= mid) i = n; });
+            return i;
+        }
+        function go(i) {
+            i = Math.max(0, Math.min(frames.length - 1, i));
+            strip.scrollTo({ left: frames[i].offsetLeft - 40, behavior: 'smooth' });
+        }
+        function update() {
+            const max = strip.scrollWidth - strip.clientWidth;
+            const i = strip.scrollLeft >= max - 2 ? frames.length - 1 : current();
+            count.textContent = pad(i + 1) + ' / ' + pad(frames.length);
+            progress.style.width = (max > 0 ? strip.scrollLeft / max * 100 : 0) + '%';
+        }
+        strip.addEventListener('scroll', update, { passive: true });
+        document.getElementById('prev').onclick = () => go(current() - 1);
+        document.getElementById('next').onclick = () => go(current() + 1);
+        addEventListener('keydown', e => {
+            if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+            if (e.key === 'ArrowLeft')  { e.preventDefault(); go(current() - 1); }
+        });
+        update();
+    })();
+    </script>
+</body>
+</html>
